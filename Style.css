@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px; /* Lebar yang kira-kira mirip ponsel */
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#result {
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+    border: none;
+    text-align: right;
+    font-size: 3em;
+    padding: 10px;
+    color: #333;
+    outline: none;
+    pointer-events: none; /* Agar tidak bisa diketik langsung */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.button {
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 50%; /* Membuat tombol bulat */
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Tinggi yang sama dengan lebar untuk tombol bulat */
+    width: 60px; /* Lebar yang sama dengan tinggi untuk tombol bulat */
+}
+
+.button:active {
+    background-color: #e0e0e0;
+}
+
+.button.orange {
+    background-color: #ff9800; /* Warna oranye MIUI */
+    color: white;
+}
+
+.button.orange:active {
+    background-color: #e68a00;
+}
+
+.button.equals {
+    grid-column: span 1; /* Hanya satu kolom */
+    height: 60px; /* Tinggi tombol sama dengan yang lain */
+    width: 60px; /* Lebar tombol sama dengan yang lain */
+    border-radius: 50%;
+}
+
+/* Penyesuaian untuk tombol khusus jika perlu */
+.button.special {
+    font-size: 1.2em; /* Ukuran font lebih kecil untuk icon */
+}
